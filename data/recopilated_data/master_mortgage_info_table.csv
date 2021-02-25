@@ -1,0 +1,4 @@
+﻿Bank ,Interest_Rate,Payments_a_year,Mortgage_lifespan,Mortgage_value,Percent_Down_Payment
+Fony Bank,0.055,12,30,50000,0.1
+Village Bank,0.0575,12,30,50000,0.1
+Edison Banl,0.0535,12,30,50000,0.1
