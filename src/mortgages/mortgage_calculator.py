@@ -42,7 +42,6 @@ def create_bank_mortgage_info_dict(
 def create_multiple_mortgage_tables(
         info_table_path
 ):
-    info_table_path = TABLE_PATH
     info_table = pd.read_csv(info_table_path)
     info_table["Bank "] = info_table["Bank "].str.replace(' ', '_')
     master_dictionary = create_bank_mortgage_info_dict(info_table)
