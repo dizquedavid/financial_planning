@@ -5,7 +5,8 @@ import os
 
 today = date.today()
 DESIRED_START_DATE = today.strftime("%d/%m/%Y")
-TABLE_PATH = "data/primary_data/master_mortgage_info_table.csv"
+TABLE_PATH = "data/primary_data/master_mortgage_info_table.csv" # change this path to whatever you want if you do not want to use the given CSV structure, 
+                                                                # make sure to have the same table structure *** for your file, along with column names 
 
 def generate_required_columns():
     """
@@ -42,6 +43,15 @@ def create_bank_mortgage_info_dict(
 def create_multiple_mortgage_tables(
         info_table_path
 ):
+    
+    """
+    The function iterates over the CSV file, making each Bank a Key withina  repository. 
+    For each bank a backbone empty table is created with the desired periods, 
+    and then it is populated with a mortgage monthly, interest and principal payment calculator. 
+    
+    The pipeline outputs a series of tables (in csv format) with all the mortgage calculations 
+    for each inputed bank, and the csv files are saved with the information name of said bank. 
+    """
     info_table = pd.read_csv(info_table_path)
     info_table["Bank "] = info_table["Bank "].str.replace(' ', '_')
     master_dictionary = create_bank_mortgage_info_dict(info_table)
