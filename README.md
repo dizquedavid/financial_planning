@@ -1,4 +1,4 @@
-# Financial Planning Repo
+# Financial Planning 
 
 This repository contains a mortgage calculator, along with other Financial Planning pipelines and utilities. 
 Up to this point the repo contains a mortgage pipeline, but I will soon be including a salary calculator (relevant to Panamanian legislation and taxes). 
