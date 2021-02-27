@@ -5,7 +5,7 @@ import os
 
 today = date.today()
 DESIRED_START_DATE = today.strftime("%d/%m/%Y")
-TABLE_PATH = "data/recopilated_data/master_mortgage_info_table.csv"
+TABLE_PATH = "data/primary_data/master_mortgage_info_table.csv"
 
 def generate_required_columns():
     """
@@ -65,6 +65,7 @@ def create_multiple_mortgage_tables(
         # Creating Output File
         output_path = os.path.join(
             "data",
+            "output_data",
             "mortgage_calculations",
             item,
         )
